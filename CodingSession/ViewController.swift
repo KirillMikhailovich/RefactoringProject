@@ -10,11 +10,11 @@ import SnapKit
 import Accelerate
 import Photos
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
-    private enum Constants {
-      static let previewSize: CGSize = CGSize(width: UIScreen.main.bounds.width / 3, height: UIScreen.main.bounds.width / 3)
-      static let cellIdentifier = "SearchPreferencesCell"
+    private struct Constants {
+        static let previewSize: CGSize = CGSize(width: UIScreen.main.bounds.width / 3, height: UIScreen.main.bounds.width / 3)
+        static let cellIdentifier = "SearchPreferencesCell"
     }
 
     private var collectionView: UICollectionView!
@@ -36,7 +36,6 @@ class ViewController: UIViewController {
     }
 
     private func style() {
-
         let collectionFlowLayout = UICollectionViewFlowLayout()
         collectionFlowLayout.sectionInset = .zero
         collectionFlowLayout.minimumInteritemSpacing = 0
@@ -51,19 +50,19 @@ class ViewController: UIViewController {
         }
 
         collectionView.register(PreviewCell.self, forCellWithReuseIdentifier: Constants.cellIdentifier)
-        collectionView.delegate = self
         collectionView.dataSource = self
     }
 
 }
 
-extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension ViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        let cell: PreviewCell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.cellIdentifier,
-                                                                   for: indexPath) as! PreviewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.cellIdentifier, for: indexPath)
 
+        guard let cell = cell as? PreviewCell else { return UICollectionViewCell() }
+        
         let asset = self.assets[indexPath.row]
 
         GalleryManager.loadPreview(asset: asset,
