@@ -8,25 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		D3D03FB52AF27571006BD5C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D03FB42AF27571006BD5C8 /* AppDelegate.swift */; };
-		D3D03FB72AF27571006BD5C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D03FB62AF27571006BD5C8 /* SceneDelegate.swift */; };
 		D3D03FB92AF27571006BD5C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D03FB82AF27571006BD5C8 /* ViewController.swift */; };
-		D3D03FBC2AF27571006BD5C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3D03FBA2AF27571006BD5C8 /* Main.storyboard */; };
-		D3D03FBE2AF27572006BD5C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3D03FBD2AF27572006BD5C8 /* Assets.xcassets */; };
-		D3D03FC12AF27572006BD5C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3D03FBF2AF27572006BD5C8 /* LaunchScreen.storyboard */; };
 		D3D03FCA2AF2758E006BD5C8 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3D03FC92AF2758E006BD5C8 /* SnapKit */; };
-		D3D03FD32AF2759B006BD5C8 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D3D03FD22AF2759B006BD5C8 /* RxCocoa */; };
-		D3D03FDA2AF27AC8006BD5C8 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D3D03FD92AF27AC8006BD5C8 /* RxSwift */; };
 		D3D03FDC2AF27B52006BD5C8 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D03FDB2AF27B52006BD5C8 /* Accelerate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D3D03FB12AF27571006BD5C8 /* CodingSession.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodingSession.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D03FB42AF27571006BD5C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D3D03FB62AF27571006BD5C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D3D03FB82AF27571006BD5C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D3D03FBB2AF27571006BD5C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D3D03FBD2AF27572006BD5C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D3D03FC02AF27572006BD5C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3D03FC22AF27572006BD5C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3D03FDB2AF27B52006BD5C8 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -36,10 +26,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3D03FDA2AF27AC8006BD5C8 /* RxSwift in Frameworks */,
 				D3D03FDC2AF27B52006BD5C8 /* Accelerate.framework in Frameworks */,
 				D3D03FCA2AF2758E006BD5C8 /* SnapKit in Frameworks */,
-				D3D03FD32AF2759B006BD5C8 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,11 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				D3D03FB42AF27571006BD5C8 /* AppDelegate.swift */,
-				D3D03FB62AF27571006BD5C8 /* SceneDelegate.swift */,
 				D3D03FB82AF27571006BD5C8 /* ViewController.swift */,
-				D3D03FBA2AF27571006BD5C8 /* Main.storyboard */,
-				D3D03FBD2AF27572006BD5C8 /* Assets.xcassets */,
-				D3D03FBF2AF27572006BD5C8 /* LaunchScreen.storyboard */,
 				D3D03FC22AF27572006BD5C8 /* Info.plist */,
 			);
 			path = CodingSession;
@@ -103,8 +87,6 @@
 			name = CodingSession;
 			packageProductDependencies = (
 				D3D03FC92AF2758E006BD5C8 /* SnapKit */,
-				D3D03FD22AF2759B006BD5C8 /* RxCocoa */,
-				D3D03FD92AF27AC8006BD5C8 /* RxSwift */,
 			);
 			productName = CodingSession;
 			productReference = D3D03FB12AF27571006BD5C8 /* CodingSession.app */;
@@ -136,7 +118,6 @@
 			mainGroup = D3D03FA82AF27571006BD5C8;
 			packageReferences = (
 				D3D03FC82AF2758E006BD5C8 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				D3D03FCD2AF2759B006BD5C8 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = D3D03FB22AF27571006BD5C8 /* Products */;
 			projectDirPath = "";
@@ -152,9 +133,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3D03FC12AF27572006BD5C8 /* LaunchScreen.storyboard in Resources */,
-				D3D03FBE2AF27572006BD5C8 /* Assets.xcassets in Resources */,
-				D3D03FBC2AF27571006BD5C8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,30 +145,10 @@
 			files = (
 				D3D03FB92AF27571006BD5C8 /* ViewController.swift in Sources */,
 				D3D03FB52AF27571006BD5C8 /* AppDelegate.swift in Sources */,
-				D3D03FB72AF27571006BD5C8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		D3D03FBA2AF27571006BD5C8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D3D03FBB2AF27571006BD5C8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D3D03FBF2AF27572006BD5C8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D3D03FC02AF27572006BD5C8 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D3D03FC32AF27572006BD5C8 /* Debug */ = {
@@ -322,9 +280,10 @@
 				DEVELOPMENT_TEAM = BDEECFJM89;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CodingSession/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Photo request";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -353,9 +312,10 @@
 				DEVELOPMENT_TEAM = BDEECFJM89;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CodingSession/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Photo request";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,14 +366,6 @@
 				minimumVersion = 5.6.0;
 			};
 		};
-		D3D03FCD2AF2759B006BD5C8 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.6.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -421,16 +373,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D3D03FC82AF2758E006BD5C8 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		D3D03FD22AF2759B006BD5C8 /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D3D03FCD2AF2759B006BD5C8 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		D3D03FD92AF27AC8006BD5C8 /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D3D03FCD2AF2759B006BD5C8 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
