@@ -7,18 +7,22 @@
 
 import UIKit
 
-class PreviewCell: UICollectionViewCell {
+final class PreviewCell: UICollectionViewCell {
 
-    var thumbImageView: UIImageView!
-    var durationLabel: UILabel!
+    private struct Constants {
+        static let titleOffset: CGFloat = 8.0
+    }
 
-    var image: UIImage! {
+    private var thumbImageView: UIImageView!
+    private var durationLabel: UILabel!
+
+    var image: UIImage? {
         didSet {
             thumbImageView.image = image
         }
     }
 
-    var title: String! {
+    var title: String? {
         didSet {
             durationLabel.text = title
         }
@@ -26,25 +30,38 @@ class PreviewCell: UICollectionViewCell {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-
-        thumbImageView = UIImageView(frame: .zero)
-        contentView.addSubview(thumbImageView)
-        thumbImageView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-        thumbImageView.contentMode = .scaleAspectFill
-        thumbImageView.clipsToBounds = true
-
-        durationLabel = UILabel(frame: .zero)
-        contentView.addSubview(durationLabel)
-        durationLabel.snp.makeConstraints { make in
-            make.leading.equalTo(8)
-            make.bottom.equalTo(-8)
-        }
+        style()
     }
 
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        style()
+    }
+
+    private func style() {
+        styleThumbImage()
+        styleDurationTitle()
+    }
+
+    private func styleThumbImage() {
+        thumbImageView = UIImageView(frame: .zero)
+        contentView.addSubview(thumbImageView)
+
+        thumbImageView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+
+        thumbImageView.contentMode = .scaleAspectFill
+        thumbImageView.clipsToBounds = true
+    }
+
+    private func styleDurationTitle() {
+        durationLabel = UILabel(frame: .zero)
+        contentView.addSubview(durationLabel)
+        durationLabel.snp.makeConstraints { make in
+            make.leading.equalTo(Constants.titleOffset)
+            make.bottom.equalTo(-Constants.titleOffset)
+        }
     }
 
 }

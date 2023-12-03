@@ -34,7 +34,6 @@ class GalleryManager {
         manager.requestImage(for: asset, targetSize: targetSize, contentMode: .aspectFill, options: requestOptions) { (image, _) in
             completion(image)
         }
-
     }
 
 }

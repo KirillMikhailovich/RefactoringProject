@@ -69,10 +69,10 @@
 		D3D03FB32AF27571006BD5C8 /* CodingSession */ = {
 			isa = PBXGroup;
 			children = (
-				311615DA2B1CE25F008A44AB /* Utils */,
 				D3D03FB42AF27571006BD5C8 /* AppDelegate.swift */,
 				D3D03FB82AF27571006BD5C8 /* ViewController.swift */,
 				311615D82B1CE014008A44AB /* PreviewCell.swift */,
+				311615DA2B1CE25F008A44AB /* Utils */,
 				D3D03FC22AF27572006BD5C8 /* Info.plist */,
 			);
 			path = CodingSession;
